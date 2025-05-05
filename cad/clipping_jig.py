@@ -67,6 +67,9 @@ def make_clip_jig(spec: ClipJigSpec) -> bd.Part | bd.Compound:
 if __name__ == "__main__":
     parts = {
         "clip_jig": show(make_clip_jig(ClipJigSpec())),
+        "clip_jig_big_holes": show(
+            make_clip_jig(ClipJigSpec(pin_hole_size=2))
+        ),
     }
 
     logger.info("Showing CAD model(s)")
